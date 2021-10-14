@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HelloController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,4 +20,6 @@ Route::get('/', function () {
 });
 
 
+Route::get('hello/{id?}', 'App\Http\Controllers\HelloController@index');
 Route::get('hello/', 'App\Http\Controllers\HelloController@index');
+Route::post('hello/', 'App\Http\Controllers\HelloController@post');
